@@ -21,8 +21,12 @@ export class AppComponent implements OnInit {
       console.log('Bio:' + data.bio);
       console.log('Company:' + data.company);
       },
-      err => {
-        console.log('Error occured');
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+          console.log('Client-side Error occured');
+        } else {
+          console.log('Server-side Error occured'); 
+        }
       }
     );
   }
