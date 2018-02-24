@@ -29,6 +29,20 @@ export class AppComponent implements OnInit {
         }
       }
     );
+
+    const req = this.http.post('https://jsonplaceholder.typicode.com/posts', {
+    title: 'foo',
+    body: 'restaurant',
+    UserId: 1
+    } )
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log('Error occured');
+        }
+      );
   }
 }
 
