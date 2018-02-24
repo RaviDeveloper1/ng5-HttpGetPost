@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         if (err.error instanceof Error) {
           console.log('Client-side Error occured');
         } else {
-          console.log('Server-side Error occured'); 
+          console.log('Server-side Error occured');
         }
       }
     );
